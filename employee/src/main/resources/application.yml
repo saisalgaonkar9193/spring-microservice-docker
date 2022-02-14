@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: employee-service
+
+server:
+  port: 8081
+ 
+eureka: 
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+
+
+management:
+  server:
+    port: 9090
+  endpoints:
+    web:
+      exposure:
+        include:
+        - openapi
+        - swaggerui
+        - info
+
+
+springdoc:
+  use-management-port: true
+  show-actuator: true
