@@ -12,17 +12,12 @@ eureka:
 
 
 management:
-  server:
-    port: 9090
   endpoints:
     web:
       exposure:
         include:
-        - openapi
-        - swaggerui
         - info
 
 
 springdoc:
-  use-management-port: true
   show-actuator: true
